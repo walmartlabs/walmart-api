@@ -17,9 +17,9 @@ function _makeRequest(url) {
 }
 
 function _feed(feed, key, category) {
-  var url = "http://api.walmartlabs.com/v1/feeds/" + feed + "?apiKey=" + key;
+  var url = "//api.walmartlabs.com/v1/feeds/" + feed + "?apiKey=" + key;
   if (category) {
-    url += "&categoryId=" + categoryId;
+    url += "&categoryId=" + category;
   }
   return _makeRequest(url);
 }
@@ -80,14 +80,16 @@ module.exports = function(key) {
     reviews: function(itemID) {
       return _makeRequest("//api.walmartlabs.com/v1/reviews/" + itemID + "?apiKey=" + key + "&format=json");
     },
-    storesByPosition: function(lat, lon) {
-      return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&lon=" + lon + "&lat=" + lat );
-    },
-    storesByCity: function(city) {
-      return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&city=" + escape(city) );
-    },
-    storesByZip: function(zip) {
-      return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&zip=" + zip );
+    stores: {
+      byPosition: function(lat, lon) {
+        return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&lon=" + lon + "&lat=" + lat );
+      },
+      byCity: function(city) {
+        return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&city=" + escape(city) );
+      },
+      byZip: function(zip) {
+        return _makeRequest("//api.walmartlabs.com/v1/stores?apiKey=" + key + "&zip=" + zip );
+      }
     }
   }
 };

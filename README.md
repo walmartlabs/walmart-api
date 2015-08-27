@@ -61,15 +61,15 @@ Returns recommended products based on the item ID.
 
 Returns customer reviews for the specific WalmartLabs Item ID.
 
-### storesByPosition(lat, lon)
+### stores.byPosition(lat, lon)
 
 Returns a list of stores by the specified GPS latitude and longitude.
 
-### storesByCity(city)
+### stores.byCity(city)
 
 Returns a list of stores by the specified city name.
 
-### storesByZip(zip)
+### stores.byZip(zip)
 
 Returns a list of stores by the specified zip code.
 

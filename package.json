@@ -1,15 +1,25 @@
 {
-  "name": "walmart-api",
-  "version": "0.0.1",
+  "name": "walmart",
+  "version": "0.0.2",
   "description": "Walmart API wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "mocha"
   },
-  "author": "Jack Herrington <jherrington@walmartlabs.com>",
+  "author": "Van Nguyen <thegoleffect@gmail.com>",
+  "contributors": [{
+    "name": "Jack Herrington",
+    "email": "jherrington@walmartlabs.com"
+  }],
   "license": "MIT",
   "dependencies": {
     "bluebird": "^2.9.34",
     "isomorphic-fetch": "^2.1.1"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "jshint": "^2.5.11",
+    "mocha": "^2.1.0",
+    "nock": "^0.56.0"
   }
 }
