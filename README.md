@@ -27,7 +27,7 @@ Once you have the `walmart` object you can make these requests.
 This is a promise based library, so requests will look like this:
 
 ```
-API.getItem(10449075).then(function(item) {
+walmart.getItem(10449075).then(function(item) {
   console.log(item.product.productAttributes.productName);
 });
 ```
@@ -36,20 +36,20 @@ The `then` function is called when the item data is returned.
 
 You can see more examples in `examples/simple.js`.
 
-### getItem(itemID)
+### walmart.getItem(itemID)
 
 This returns the item information for a specific product based on it's WalmartLabs product ID.
 
-### getItemByUPC(upcCode)
+### walmart.getItemByUPC(upcCode)
 
 Returns the product by the upcCode, the barcode on a product is the UPC so you should send that
 directly to the API.
 
-### search(term, extras)
+### walmart.search(term, extras)
 
 Returns a list of products that match the search term.
 
-### taxonomy()
+### walmart.taxonomy()
 
 Returns our category taxonomy.
 
@@ -57,50 +57,50 @@ Returns our category taxonomy.
 
 Returns recommended products based on the item ID.
 
-### reviews(itemID)
+### walmart.reviews(itemID)
 
 Returns customer reviews for the specific WalmartLabs Item ID.
 
-### stores.byPosition(lat, lon)
+### walmart.stores.byPosition(lat, lon)
 
 Returns a list of stores by the specified GPS latitude and longitude.
 
-### stores.byCity(city)
+### walmart.stores.byCity(city)
 
 Returns a list of stores by the specified city name.
 
-### stores.byZip(zip)
+### walmart.stores.byZip(zip)
 
 Returns a list of stores by the specified zip code.
 
-### feeds.items(categoryId)
+### walmart.feeds.items(categoryId)
 
 Returns an array of items on the specified category.
 
-### feeds.bestSellers(categoryId)
+### walmart.feeds.bestSellers(categoryId)
 
 Returns an array of items of the best-sellers on the specified category.
 
-### feeds.preOrder()
+### walmart.feeds.preOrder()
 
 Returns an array of items of the available pre-orders.
 
-### feeds.rollback(categoryId)
+### walmart.feeds.rollback(categoryId)
 
 Returns an array of items of the rollbacks on the specified category.
 
-### feeds.clearance(categoryId)
+### walmart.feeds.clearance(categoryId)
 
 Returns an array of items of the clearance items on the specified category.
 
-### feeds.specialBuy(categoryId)
+### walmart.feeds.specialBuy(categoryId)
 
 Returns an array of items of the special buy items on the specified category.
 
-### feeds.valueOfTheDay(categoryId)
+### walmart.feeds.valueOfTheDay(categoryId)
 
 Returns an array of items of the value of the day items on the specified category.
 
-### feeds.trending(categoryId)
+### walmart.feeds.trending(categoryId)
 
 Returns an array of items of the trending items on the specified category.
