@@ -1,16 +1,18 @@
 {
   "name": "walmart",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Walmart API wrapper",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "author": "Van Nguyen <thegoleffect@gmail.com>",
-  "contributors": [{
-    "name": "Jack Herrington",
-    "email": "jherrington@walmartlabs.com"
-  }],
+  "contributors": [
+    {
+      "name": "Jack Herrington",
+      "email": "jherrington@walmartlabs.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "bluebird": "^2.9.34",
