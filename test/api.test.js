@@ -196,4 +196,24 @@ describe('walmart', function() {
       done();
     });
   });
+
+  it('should allow for a store search', function(done) {
+    nock('http://search.mobile.walmart.com')
+      .get('/search?query=foo&store=100')
+      .reply(200, good);
+    walmart.stores.search(100, "foo").then(function(data) {
+      expect(data.foo).to.equal("bar");
+      done();
+    });
+  });
+
+  it('should allow for a store search with extras', function(done) {
+    nock('http://search.mobile.walmart.com')
+      .get('/search?query=foo&store=100&fooz=baz')
+      .reply(200, good);
+    walmart.stores.search(100, "foo", {fooz: "baz"}).then(function(data) {
+      expect(data.foo).to.equal("bar");
+      done();
+    });
+  });
 });

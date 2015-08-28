@@ -73,6 +73,10 @@ Returns a list of stores by the specified city name.
 
 Returns a list of stores by the specified zip code.
 
+### walmart.stores.search(store, query, extras)
+
+Returns a list of products that match the `query` in the specified `store`.
+
 ### walmart.feeds.items(categoryId)
 
 Returns an array of items on the specified category.

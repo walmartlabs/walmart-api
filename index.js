@@ -90,6 +90,15 @@ module.exports = function(key, options) {
       },
       byZip: function(zip) {
         return _get(options, "//api.walmartlabs.com/v1/stores?apiKey=" + key + "&zip=" + zip );
+      },
+      search: function(store, query, extras) {
+        var url = "http://search.mobile.walmart.com/search?query=" + escape(query) + "&store=" + store;
+        if (extras) {
+          for (var k in extras) {
+            url += "&" + k + "=" + escape(extras[k]);
+          }
+        }
+        return _get({}, url);
       }
     }
   }
