@@ -1,8 +1,8 @@
 Walmart Open API
 ================
 
-This is a wrapper library around the [WalmartLabs Developer Library](https://developer.walmartlabs.com).
-To access this library you will need a developer key.
+This library is deprecated and no longer supported.
+To access the latest list of Walmart Open APIs and get onboarding instructions, please visit our new portal: https://walmart.io/
 
 ## Installation
 
